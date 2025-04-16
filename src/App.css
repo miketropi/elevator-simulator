@@ -1,0 +1,87 @@
+.building {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.floors {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.floor {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  align-items: center;
+  min-height: 60px;
+  gap: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.floor-info {
+  text-align: right;
+}
+
+.floor-number {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.elevator-area {
+  display: flex;
+  gap: 1rem;
+  height: 100%;
+  align-items: center;
+}
+
+.elevator {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.elevator.visible {
+  border: none;
+}
+
+.call-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 80px;
+  text-align: center;
+}
+
+.call-button:disabled {
+  opacity: 1;
+}
+
+.call-button.idle {
+  background-color: #4CAF50;
+}
+
+.call-button.waiting {
+  background-color: #f44336;
+}
+
+/* Animation for elevator movement */
+@keyframes elevatorMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(var(--travel-distance));
+  }
+}
+
+.elevator.moving {
+  animation: elevatorMove var(--travel-time) ease-in-out forwards;
+}
