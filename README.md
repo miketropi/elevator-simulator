@@ -2,6 +2,9 @@
 
 A modern web-based elevator management system for a 10-floor building with 5 elevators. This project implements a sophisticated elevator control system with real-time animations, smart elevator assignment, and an intuitive user interface.
 
+![Elevator System Preview](https://github.com/miketropi/elevator-simulator/blob/master/preview.jpeg?raw=true)
+
+
 ## Features
 
 - 🏢 10-floor building with 5 elevators
